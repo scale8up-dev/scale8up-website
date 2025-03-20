@@ -2,7 +2,9 @@ jQuery(document).ready(function($) {
   "use strict";
 
   //Contact
-  $('form.contactForm').submit(function() {
+  $('form.contactForm').submit(function(event) {
+    event.preventDefault();
+    
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
@@ -88,31 +90,41 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+    
     if (ferror) return false;
-    else var str = $(this).serialize();
-    var action = $(this).attr('action');
-    if( ! action ) {
-      action = 'contactform/contactform.php';
-    }
+    
+    // If validation passed, send to Formspree
+    var form = $(this)[0];
+    var status = document.getElementById("my-form-status");
+    var formData = new FormData(form);
+    
+    // Submit the form using Formspree
     $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
+      url: form.action,
+      method: form.method,
+      data: formData,
+      processData: false,
+      contentType: false,
+      headers: {
+        'Accept': 'application/json'
+      },
+      success: function(data) {
+        $("#sendmessage").addClass("show");
+        $("#errormessage").removeClass("show");
+        $('#my-form-status').html("Thanks for your submission!");
+        form.reset();
+      },
+      error: function(err) {
+        $("#sendmessage").removeClass("show");
+        $("#errormessage").addClass("show");
+        $('#errormessage').html("Oops! There was a problem submitting your form.");
+        if (err.responseJSON && err.responseJSON.errors) {
+          $('#my-form-status').html(err.responseJSON.errors.map(error => error.message).join(", "));
         } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
+          $('#my-form-status').html("Oops! There was a problem submitting your form.");
         }
-
       }
     });
-    return false;
   });
 
 });

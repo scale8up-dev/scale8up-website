@@ -718,7 +718,7 @@
             <div class="form">
               <h4>Send us a message</h4>
               <p>Have a project in mind? Let's discuss how we can help you achieve your goals.</p>
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="https://formspree.io/f/xvgkzjeq" method="POST" role="form" class="contactForm" id="my-form">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
@@ -738,8 +738,9 @@
 
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
+                <div id="my-form-status"></div>
 
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                <div class="text-center"><button type="submit" title="Send Message" id="my-form-button">Send Message</button></div>
               </form>
             </div>
           </div>
