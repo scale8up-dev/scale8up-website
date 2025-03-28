@@ -779,10 +779,17 @@ h6 {
   margin-bottom: 30px;
 }
 
-#portfolio .portfolio-item .portfolio-wrap {
-  overflow: hidden;
+#portfolio .portfolio-wrap {
   position: relative;
-  margin: 0;
+  overflow: hidden;
+  height: 250px; /* Fixed height for all portfolio items */
+}
+
+#portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures images cover the area without distortion */
+  object-position: center;
 }
 
 #portfolio .portfolio-item .portfolio-wrap:hover img {
