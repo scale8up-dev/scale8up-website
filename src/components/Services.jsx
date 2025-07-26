@@ -1,5 +1,5 @@
 import React from "react";
-import SwiperCustome from "./swiperCustome";
+import SwiperCustome from "./SwiperCustome";
 
 export default function Services() {
   return (
