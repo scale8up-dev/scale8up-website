@@ -3,7 +3,7 @@ import SwiperCustome from "./SwiperCustome";
 
 export default function Services() {
   return (
-    <div className="px-5 py-[110px] relative">
+    <section className="px-5 py-[110px] relative" id="service">
       <div className="relative mb-[30px]">
         <span
           style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -20,6 +20,6 @@ export default function Services() {
       </div>
 
       <SwiperCustome />
-    </div>
+    </section>
   );
 }

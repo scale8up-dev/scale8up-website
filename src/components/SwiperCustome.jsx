@@ -11,7 +11,7 @@ function SwiperCustome() {
   const items = [
     {
       id: 1,
-      text: "Gym Flooring",
+      text: "AI Development",
       image: service1,
       title: "AI Development",
       description:
@@ -19,7 +19,7 @@ function SwiperCustome() {
     },
     {
       id: 2,
-      text: "Rubber Flooring",
+      text: "Web Development",
       image: service2,
       title: "Web Development",
       description:
@@ -27,7 +27,7 @@ function SwiperCustome() {
     },
     {
       id: 3,
-      text: "Foam Flooring",
+      text: "Mobile App Development",
       image: service3,
       title: "Mobile App Development",
       description:
@@ -35,7 +35,7 @@ function SwiperCustome() {
     },
     {
       id: 4,
-      text: "Garage Flooring",
+      text: "UI/UX Design",
       image: service4,
       title: "UI/UX Design",
       description:
@@ -43,17 +43,17 @@ function SwiperCustome() {
     },
     {
       id: 5,
-      text: "Garage Flooring",
+      text: "Cloud & DevOps",
       image: service1,
-      title: "",
-      description: "",
+      title: "Cloud & DevOps",
+      description: "Streamline your operations with our cloud solutions and DevOps practices. We help you achieve faster deployment, better scalability, and improved efficiency.",
     },
     {
       id: 6,
-      text: "Garage Flooring",
+      text: "Machine Learning",
       image: service2,
-      title: "",
-      description: "",
+      title: "Machine Learning",
+      description: "Advanced machine learning solutions that help you make data-driven decisions. From predictive analytics to pattern recognition, we leverage cutting-edge ML algorithms to solve complex business challenges.",
     },
   ];
 

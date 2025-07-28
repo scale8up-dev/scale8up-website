@@ -25,3 +25,10 @@ body {
 .homeswiper .swiper-slide {
   height: auto;
 }
+.testimonialslider .swiper-slide {
+    padding: 35px 5px 5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+

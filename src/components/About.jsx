@@ -4,7 +4,7 @@ import about2 from "../assets/about2.png";
 
 export default function About() {
   return (
-    <div className="w-full relative bg-white rounded-[20px] py-[100px] bg-[url(assets/vector.png)] bg-contain bg-no-repeat">
+    <section className="w-full relative bg-white rounded-[20px] py-[100px] bg-[url(assets/vector.png)] bg-contain bg-no-repeat" id="about">
       <div className="mx-auto max-w-[1300px] px-5">
         <div className="relative pl-[240px] aboutusheading mb-[30px]">
           <span
@@ -98,6 +98,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
