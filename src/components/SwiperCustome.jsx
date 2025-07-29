@@ -46,21 +46,23 @@ function SwiperCustome() {
       text: "Cloud & DevOps",
       image: service1,
       title: "Cloud & DevOps",
-      description: "Streamline your operations with our cloud solutions and DevOps practices. We help you achieve faster deployment, better scalability, and improved efficiency.",
+      description:
+        "Streamline your operations with our cloud solutions and DevOps practices. We help you achieve faster deployment, better scalability, and improved efficiency.",
     },
     {
       id: 6,
       text: "Machine Learning",
       image: service2,
       title: "Machine Learning",
-      description: "Advanced machine learning solutions that help you make data-driven decisions. From predictive analytics to pattern recognition, we leverage cutting-edge ML algorithms to solve complex business challenges.",
+      description:
+        "Advanced machine learning solutions that help you make data-driven decisions. From predictive analytics to pattern recognition, we leverage cutting-edge ML algorithms to solve complex business challenges.",
     },
   ];
 
   return (
     <div className="homeswiper" style={{ position: "relative px-5" }}>
       <div
-        className="absolute top-[200px] right-3"
+        className="absolute top-[240px] sm:top-[100px] md:top-[150px] xl:top-[200px] right-3"
         style={{
           display: "flex",
           justifyContent: "flex-end",
@@ -131,6 +133,24 @@ function SwiperCustome() {
         }}
         spaceBetween={20}
         slidesPerView={4}
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>

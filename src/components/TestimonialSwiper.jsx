@@ -62,11 +62,29 @@ function TestimonialSwiper() {
         }}
         spaceBetween={20}
         slidesPerView={3}
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          575: {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
             <div
-              className="bg-[#f5f5f5] hover:bg-white hover:shadow-sm p-[30px] pt-[60px] rounded-[10px] h-full flex flex-wrap content-between relative  text-left"
+              className="bg-[#f5f5f5] hover:bg-white hover:shadow-sm p-5 xl:p-[30px] pt-[60px] rounded-[10px] h-full flex flex-wrap content-between relative  text-left"
             >
             <img className="absolute w-fit top-[-35px] right-12" src={quote} alt="quoteimg" />
               <p className="mb-10 text-[16px] leading-[26px] text-[#868686] text-left">

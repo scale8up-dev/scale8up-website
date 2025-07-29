@@ -42,16 +42,16 @@ export default function Faq() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="w-full p-[100px] faq">
-      <div className="flex">
-        <div className="w-[40%] pr-[100px]">
+    <div className="w-full py-[50px] px-[20px] xl:p-[100px] faq">
+      <div className="flex flex-wrap">
+        <div className="w-full sm:w-[40%] pr-5 lg:pr-10 xl:pr-[100px] mb-5 sm:mb-0">
           <span
             style={{ fontFamily: "Space Grotesk, sans-serif" }}
             className="inline-block text-xl font-medium text-black py-[10px] px-5 border-b border-[#49B0DC] rounded-[20px] mb-5"
           >
             FAQ
           </span>
-          <h2 className="text-5xl leading-[65px] text-black font-semibold mb-10">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl xl:leading-[65px] text-black font-semibold mb-10">
             Frequently Asked Questions
           </h2>
           <img
@@ -60,9 +60,9 @@ export default function Faq() {
             alt="FAQ"
           />
         </div>
-        <div className="w-[60%]">
+        <div className="w-full sm:w-[60%]">
           <div id="faq" data-aos="fade-up" className="w-full ">
-            <h2 className="text-semibold text-black text-3xl mb-5">
+            <h2 className="text-semibold text-black text-xl lg:text-3xl mb-5">
               General Information
             </h2>
 
@@ -70,13 +70,13 @@ export default function Faq() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border border-[#D9D9D9] rounded-[15px] p-5 transition-all duration-300 mb-[10px] cursor-pointer"
+                  className="border border-[#D9D9D9] rounded-[15px] p-3 xl:p-5 transition-all duration-300 mb-[10px] cursor-pointer"
                 >
                   <button
-                    className="w-full text-left text-sm font-medium text-black flex justify-between items-center cursor-pointer"
+                    className="w-full text-left text-sm font-medium text-black flex justify-between items-center cursor-pointer gap-2"
                     onClick={() => toggle(index)}
                   >
-                    <span className="text-[18px] font-medium">
+                    <span className="text-sm text-[18px] font-medium">
                       {faq.question.split("UImand")[0]}
                       {faq.question.split("UImand")[1]}
                     </span>

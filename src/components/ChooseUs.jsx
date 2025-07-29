@@ -58,37 +58,37 @@ export default function ChooseUs() {
   };
 
   return (
-    <div ref={sectionRef} className="bg-white relative py-[110px]">
+    <div ref={sectionRef} className="bg-white relative py-[50px] xl:py-[110px]">
       <div className="max-w-[1300px] px-5 mx-auto">
-        <div className="relative pb-[70px] mb-[70px] text-center border-b">
+        <div className="relative pb-7 xl:pb-[70px] mb-7 xl:mb-[70px] text-center border-b">
           <span style={{ fontFamily: 'Space Grotesk, sans-serif' }} className="inline-block text-xl font-medium text-black py-[10px] px-5 border-b border-[#49B0DC] rounded-[20px] mb-5">
             Why choose us?
           </span>
-          <h2 className="text-[54px] leading-[65px] text-black font-medium max-w-[960px] mx-auto">
+          <h2 className="text-3xl lg:text-[40px] leading-[1] xl:text-[54px] xl:leading-[65px] text-black font-medium max-w-[960px] mx-auto">
             We combine technical expertise with innovative solutions to deliver
             exceptional results for our clients
           </h2>
         </div>
 
-        <div className="flex justify-between gap-8">
+        <div className="flex flex-wrap justify-between sm:gap-8">
           {stats.map((item, index) => (
-            <div key={index}>
-              <h2 className="text-[80px] font-medium text-black flex items-baseline">
+            <div className="mb-4 sm:mb-0 w-1/2 sm:w-fit" key={index}>
+              <h2 className="text-3xl lg:text-[40px] xl:text-[80px] leading-[1] font-medium text-black flex items-baseline">
                 <span
                   ref={(el) => (countersRef.current[index] = el)}
                   data-target={item.number}
                 >
                   0
                 </span>
-                <span className="text-[#49B0DC] text-6xl ml-1">+</span>
+                <span className="text-[#49B0DC] text-3xl xl:text-6xl ml-1">+</span>
               </h2>
-              <p className="mt-2 text-[22px] text-black">{item.label}</p>
+              <p className="mt-2 text-sm lg:text-[22px] text-black">{item.label}</p>
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mt-[70px]">
-          <div className="bg-[#F7F6F9] rounded-[15px] p-[30px] border border-[#0000001a]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 mt-10 lg:mt-[70px]">
+          <div className="bg-[#F7F6F9] rounded-[15px] p-5 lg:p-[30px] border border-[#0000001a]">
             <div className="bg-white rounded-[10px] h-[50px] w-[50px] flex items-center justify-center mb-5">
               <img src={icon1} alt="boxicon" />
             </div>
@@ -100,7 +100,7 @@ export default function ChooseUs() {
               cutting-edge solutions that give you a competitive advantage.
             </p>
           </div>
-          <div className="bg-[#F7F6F9] rounded-[15px] p-[30px] border border-[#0000001a]">
+          <div className="bg-[#F7F6F9] rounded-[15px] p-5 lg:p-[30px] border border-[#0000001a]">
             <div className="bg-white rounded-[10px] h-[50px] w-[50px] flex items-center justify-center mb-5">
               <img src={icon2} alt="boxicon" />
             </div>
@@ -111,7 +111,7 @@ export default function ChooseUs() {
               Our rigorous quality assurance processes ensure that every solution we deliver meets the highest standards of excellence.
             </p>
           </div>
-          <div className="bg-[#F7F6F9] rounded-[15px] p-[30px] border border-[#0000001a]">
+          <div className="bg-[#F7F6F9] rounded-[15px] p-5 lg:p-[30px] border border-[#0000001a]">
             <div className="bg-white rounded-[10px] h-[50px] w-[50px] flex items-center justify-center mb-5">
               <img src={icon3} alt="boxicon" />
             </div>

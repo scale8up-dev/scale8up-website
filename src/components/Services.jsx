@@ -3,18 +3,18 @@ import SwiperCustome from "./SwiperCustome";
 
 export default function Services() {
   return (
-    <section className="px-5 py-[110px] relative" id="service">
-      <div className="relative mb-[30px]">
+    <section className="px-5 py-[50px] xl:py-[110px] relative" id="service">
+      <div className="relative mb-[90px] sm:mb-[30px]">
         <span
           style={{ fontFamily: "Space Grotesk, sans-serif" }}
           className="inline-block text-xl font-medium text-black py-[10px] px-5 border-b border-[#49B0DC] rounded-[20px] mb-5"
         >
           Our Services
         </span>
-        <h2 className="text-6xl leading-[65px] text-black font-semibold">
+        <h2 className="text-3xl lg:text-6xl lg:leading-[65px] text-black font-semibold">
           What We Offer
         </h2>
-        <p className="mt-5 text-lg text-[#868686] leading-[32px] ">
+        <p className="max-w-[70%] sm:max-w-full mt-5 text-lg text-[#868686] leading-[32px] ">
           Comprehensive technology solutions to drive your business forward
         </p>
       </div>

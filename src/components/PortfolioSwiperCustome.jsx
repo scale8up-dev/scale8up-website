@@ -12,6 +12,7 @@ function PortfolioSwiperCustome() {
       id: 1,
       text: "Web Solutions",
       image: service1,
+      url: "https://www.prepforindependence.ai/",
       title: "PrepForIndependence.AI",
       description:
         "Leverage the power of artificial intelligence with our cutting-edge solutions. From machine learning to natural language processing, we help you stay ahead in the AI revolution.",
@@ -20,6 +21,7 @@ function PortfolioSwiperCustome() {
       id: 2,
       text: "AI Projects",
       image: service2,
+      url: "https://www.scale8upmethod.com/",
       title: "Scale8Up AI",
       description:
         "Custom web solutions that combine stunning design with powerful functionality. We create responsive, scalable, and secure web applications that drive your business forward.",
@@ -28,6 +30,7 @@ function PortfolioSwiperCustome() {
       id: 3,
       text: "Mobile Apps",
       image: service3,
+      url: "https://onyxflow.co/",
       title: "OnyxFlow",
       description:
         "Native and cross-platform mobile applications that deliver exceptional user experiences. We build apps that users love and businesses trust.",
@@ -57,9 +60,9 @@ function PortfolioSwiperCustome() {
   ];
 
   return (
-    <div className="homeswiper" style={{ position: "relative px-5" }}>
+    <div className="homeswiper portfolioswiper" style={{ position: "relative px-5" }}>
       <div
-        className="absolute top-[170px] right-3"
+        className="absolute top-[160px] sm:top-[90px] xl:top-[170px] right-3"
         style={{
           display: "flex",
           justifyContent: "flex-end",
@@ -130,14 +133,24 @@ function PortfolioSwiperCustome() {
         }}
         spaceBetween={20}
         slidesPerView={1.5}
-        centeredSlidesBounds={true} 
-        centeredSlides={true} // ✅ Add this line to center the active slide
+        centeredSlidesBounds={true}
+        centeredSlides={true}
         loop={true}
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          1280: {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+          }
+        }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
             <div
-              className="bg-white p-[30px] rounded-[30px] h-full grid grid-cols-2 gap-9 items-end"
+              className="bg-white p-5 lg:p-[30px] rounded-[30px] h-full grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-9 items-end"
               style={{
                 position: "relative",
                 overflow: "hidden",
@@ -145,7 +158,7 @@ function PortfolioSwiperCustome() {
             >
               <div className="w-full">
                 <img
-                  className="h-100 img-fluid object-cover min-h-[500px]"
+                  className="sm:h-100 img-fluid object-cover h-[300px] sm:min-h-[400px] lg:min-h-[500px]"
                   src={item.image}
                   alt={item.text}
                   style={{
@@ -156,11 +169,13 @@ function PortfolioSwiperCustome() {
                 />
               </div>
               <div>
-                <p className="text-[17px] font-semibold leading-5 py-[18px] px-5 bg-[#D9D9D9] rounded-[50px] absolute top-[30px] right-[30px]">{item.text}</p>
-                <p className="mb-5 text-[50px] leading-[65px] text-black font-semibold">
+                <p className="text-[17px] font-semibold leading-5 py-[18px] px-5 bg-[#D9D9D9] rounded-[50px] absolute top-[30px] right-[30px]">
+                  {item.text}
+                </p>
+                <p className="mb-5 text-2xl lg:text-3xl xl:text-4xl 2xl:text-[50px] 2xl:leading-[65px] text-black font-semibold">
                   {item?.title}
                 </p>
-                <p className="mb-[60px] text-[18px] leading-[32px] text-[#868686]">
+                <p className="mb-5 lg:mb-[60px] text-[18px] leading-[32px] text-[#868686]">
                   {item?.description}
                 </p>
                 <button className="cursor-pointer flex items-center gap-[10px] bg-[#423F67] rounded-[10px] py-[6px] pl-5 pr-[6px]">
@@ -169,7 +184,8 @@ function PortfolioSwiperCustome() {
                   </span>
                   <a
                     className="h-12 w-12 flex items-center justify-center rounded-[10px] bg-white"
-                    href=""
+                    href={item.url}
+                    target="_blank"
                   >
                     <img
                       className="h-5 w-5 object-contain"
