@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import playicon from "../assets/playicon.svg";
 
 export default function HeroSection() {
+  
   const counterRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [count, setCount] = useState(0);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,6 +48,28 @@ export default function HeroSection() {
 
     update();
   };
+   const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+
+    if (targetId === "") {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 80; // Account for header height
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }
+    }
+
+    // Close mobile menu after navigation
+    // setIsMenuOpen(false);
+
+    // Prevent URL hash change
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+  };
 
   return (
     <section id="hero" className="w-full relative px-5">
@@ -61,7 +86,7 @@ export default function HeroSection() {
         </div>
 
         {/* Circle CTA Button */}
-        <div className="h-27 w-27 lg:h-40 lg:w-40 xl:h-[190px] xl:w-[190px] flex flex-col items-center justify-center rounded-[50%] bg-[#49B0DC] absolute right-[10%] sm:right-[18%] bottom-[20px] md:bottom-[30px] lg:bottom-[50px]">
+        <div  onClick={(e) => handleNavClick(e, "contact")} className="h-27 w-27 lg:h-40 lg:w-40 xl:h-[190px] xl:w-[190px] flex flex-col items-center justify-center rounded-[50%] bg-[#49B0DC] absolute right-[10%] sm:right-[18%] bottom-[20px] md:bottom-[30px] lg:bottom-[50px]">
           <svg
             className="mb-3"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +101,7 @@ export default function HeroSection() {
               strokeWidth="1.5"
             />
           </svg>
-          <p className="text-white font-semibold leading-[20px] uppercase text-sm xl:text-[18px]">
+          <p  onClick={(e) => handleNavClick(e, "contact")} className="text-white font-semibold leading-[20px] uppercase text-sm xl:text-[18px]">
             Get Started
           </p>
         </div>

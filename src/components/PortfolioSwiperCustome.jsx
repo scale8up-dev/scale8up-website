@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import service1 from "../assets/service1.png";
 import service2 from "../assets/service2.png";
 import service3 from "../assets/service3.png";
+import service4 from "../assets/service4.png";
+
 function PortfolioSwiperCustome() {
   const items = [
     {
@@ -35,28 +37,39 @@ function PortfolioSwiperCustome() {
       description:
         "Native and cross-platform mobile applications that deliver exceptional user experiences. We build apps that users love and businesses trust.",
     },
-    // {
-    //   id: 4,
-    //   text: "Garage Flooring",
-    //   image: service4,
-    //   title: "UI/UX Design",
-    //   description:
-    //     "User-centered design solutions that create engaging and intuitive interfaces. Our designs combine aesthetics with functionality to deliver memorable user experiences.",
-    // },
-    // {
-    //   id: 5,
-    //   text: "Garage Flooring",
-    //   image: service1,
-    //   title: "",
-    //   description: "",
-    // },
-    // {
-    //   id: 6,
-    //   text: "Garage Flooring",
-    //   image: service2,
-    //   title: "",
-    //   description: "",
-    // },
+    {
+      id: 4,
+      text: "AI Projects",
+      image: service4,
+      url:'http://foreclosurebidai.com/',
+      title: "foreclosurebid AI",
+      description:
+        "User-centered design solutions that create engaging and intuitive interfaces. Our designs combine aesthetics with functionality to deliver memorable user experiences.",
+    },
+    {
+      id: 5,
+      text: "AI Projects",
+      image: service1,
+      url:'https://nexplutus.com/',
+      title: "SecurRoom AI",
+      description: "Streamline your M&A workflow with AI-powered due diligence, document analysis, and automated redaction.",
+    },
+    {
+      id: 6,
+      url:'https://primeagefit.com/',
+      text: "Web Solutions",
+      image: service3,
+      title: "FitAI Coach",
+      description: "Get hyper-personalized workout plans that adapt to your progress. No more generic fitness apps - experience the precision of a personal trainer powered by intelligent AI.",
+    },
+      {
+      id: 7,
+      url:'https://envisionhr360.com/',
+      text: "Web Solutions",
+      image: service4,
+      title: "Envision HR Platform",
+      description: "Empower your SMB with self-service HR resources, AI-powered assistance, and on-demand access to human expertise—all through one intuitive platform.",
+    },
   ];
 
   return (

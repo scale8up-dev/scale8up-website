@@ -3,6 +3,26 @@ import businessleft from "../assets/businessleft.png";
 import businessright from "../assets/businessright.png";
 
 export default function BusinessSection() {
+    const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+
+    if (targetId === "") {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 80; // Account for header height
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }
+    }
+
+
+    // Prevent URL hash change
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+  };
   return (
     <div>
       <div className="relative w-full mt-[50px] px-5">
@@ -16,7 +36,7 @@ export default function BusinessSection() {
                 Let's discuss how our innovative solutions can help you achieve
                 your business goals. Contact us today for a free consultation.
               </p>
-              <button className="flex items-center gap-[10px] bg-[#fff] rounded-[10px] py-[6px] pl-5 pr-[6px] cursor-pointer">
+              <button onClick={(e) => handleNavClick(e, "contact")} className="flex items-center gap-[10px] bg-[#fff] rounded-[10px] py-[6px] pl-5 pr-[6px] cursor-pointer">
                 <span className="text-[17px] font-semibold leading-5 text-[#423F67]">
                   Contact Us
                 </span>

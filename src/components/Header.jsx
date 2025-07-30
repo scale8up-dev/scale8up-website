@@ -5,7 +5,6 @@ import linkedin from "../assets/linkedin.png";
 import rightarrow from "../assets/arrow-right.png";
 
 export default function Header({ activeSection }) {
-  console.log("activeSection", activeSection);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavClick = (e, targetId) => {

@@ -18,22 +18,24 @@ export default function Contact() {
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 EMAIL US:
               </div>
-              <div className="text-2xl font-bold">info@scale8up.com</div>
+              <div className="text-2xl font-bold">Info@businessevolutionai.com</div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 CALL US:
               </div>
-              <div className="text-2xl font-bold">+1 5589 55488 55</div>
+              <div className="text-2xl font-bold">561-542-0047</div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 ADDRESS:
               </div>
               <div className="text-2xl font-bold">
-                A108 Business Street
+               30 N Gould Street
                 <br />
-                New York, NY 535022
+               Suite R
+
                 <br />
-                United States
+               Sheridan, WY 82801
+
               </div>
             </div>
 
