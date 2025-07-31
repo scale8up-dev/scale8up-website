@@ -1,4 +1,5 @@
 import React from "react";
+import rightarrow from "../assets/arrow-right.png";
 
 export default function Contact() {
   return (
@@ -18,12 +19,16 @@ export default function Contact() {
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 EMAIL US:
               </div>
-              <div className="text-2xl font-bold">Info@businessevolutionai.com</div>
+              <div className="text-2xl font-bold">
+                <a href="mailto:info@businessevolutionai.com" className="hover:underline">info@businessevolutionai.com</a>
+              </div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 CALL US:
               </div>
-              <div className="text-2xl font-bold">561-542-0047</div>
+              <div className="text-2xl font-bold">
+                <a href="tel:5615420047" className="hover:underline">561-542-0047</a>
+              </div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 ADDRESS:
@@ -67,7 +72,7 @@ export default function Contact() {
                     <img
                       className="h-5 w-5 object-contain"
                       alt="rightarrow"
-                      src="/src/assets/arrow-right.png"
+                      src={rightarrow}  
                     />
                   </a>
                 </button>

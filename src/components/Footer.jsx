@@ -124,7 +124,7 @@ export default function Footer({ activeSection }) {
         <div className="mt-[35px] mb-[50px] w-full border-t border-[#fff] opacity-30"></div>
 
         <div className="text-center text-[18px] leading-5 font-normal text-white">
-          © Copyright SCALE8UP. All Rights Reserved
+          © Copyright Business Evolution AI. All Rights Reserved
         </div>
       </div>
     </div>
