@@ -33,7 +33,7 @@ function PortfolioSwiperCustome() {
       id: 3,
       text: "Mobile Apps",
       image: service3,
-      url: "https://onyxflow.co/",
+      url: "http://stage.onyxflowai.com/",
       title: "OnyxFlow",
       description:
         "Native and cross-platform mobile applications that deliver exceptional user experiences. We build apps that users love and businesses trust.",
@@ -42,7 +42,7 @@ function PortfolioSwiperCustome() {
       id: 4,
       text: "AI Projects",
       image: service4,
-      url:'http://foreclosurebidai.com/',
+      url: "http://foreclosurebidai.com/",
       title: "foreclosurebid AI",
       description:
         "User-centered design solutions that create engaging and intuitive interfaces. Our designs combine aesthetics with functionality to deliver memorable user experiences.",
@@ -51,30 +51,36 @@ function PortfolioSwiperCustome() {
       id: 5,
       text: "AI Projects",
       image: service1,
-      url:'https://nexplutus.com/',
+      url: "https://nexplutus.com/",
       title: "SecurRoom AI",
-      description: "Streamline your M&A workflow with AI-powered due diligence, document analysis, and automated redaction.",
+      description:
+        "Streamline your M&A workflow with AI-powered due diligence, document analysis, and automated redaction.",
     },
     {
       id: 6,
-      url:'https://primeagefit.com/',
+      url: "https://primeagefit.com/",
       text: "Web Solutions",
       image: service3,
       title: "FitAI Coach",
-      description: "Get hyper-personalized workout plans that adapt to your progress. No more generic fitness apps - experience the precision of a personal trainer powered by intelligent AI.",
+      description:
+        "Get hyper-personalized workout plans that adapt to your progress. No more generic fitness apps - experience the precision of a personal trainer powered by intelligent AI.",
     },
-      {
+    {
       id: 7,
-      url:'https://envisionhr360.com/',
+      url: "https://envisionhr360.com/",
       text: "Web Solutions",
       image: service4,
       title: "Envision HR Platform",
-      description: "Empower your SMB with self-service HR resources, AI-powered assistance, and on-demand access to human expertise—all through one intuitive platform.",
+      description:
+        "Empower your SMB with self-service HR resources, AI-powered assistance, and on-demand access to human expertise—all through one intuitive platform.",
     },
   ];
 
   return (
-    <div className="homeswiper portfolioswiper" style={{ position: "relative px-5" }}>
+    <div
+      className="homeswiper portfolioswiper"
+      style={{ position: "relative px-5" }}
+    >
       <div
         className="absolute top-[160px] sm:top-[90px] xl:top-[170px] right-3"
         style={{
@@ -158,7 +164,7 @@ function PortfolioSwiperCustome() {
           1280: {
             slidesPerView: 1.5,
             spaceBetween: 30,
-          }
+          },
         }}
       >
         {items.map((item) => (
@@ -192,21 +198,20 @@ function PortfolioSwiperCustome() {
                 <p className="mb-5 lg:mb-[60px] text-[18px] leading-[32px] text-[#868686]">
                   {item?.description}
                 </p>
-                <button className="cursor-pointer flex items-center gap-[10px] bg-[#423F67] rounded-[10px] py-[6px] pl-5 pr-[6px]">
+                <button
+                  className="cursor-pointer flex items-center gap-[10px] bg-[#423F67] rounded-[10px] py-[6px] pl-5 pr-[6px]"
+                  onClick={() => window.open(item.url, "_blank")}
+                >
                   <span className="text-[17px] font-semibold leading-5 text-white">
                     More Details
                   </span>
-                  <a
-                    className="h-12 w-12 flex items-center justify-center rounded-[10px] bg-white"
-                    href={item.url}
-                    target="_blank"
-                  >
+                  <div className="h-12 w-12 flex items-center justify-center rounded-[10px] bg-white">
                     <img
                       className="h-5 w-5 object-contain"
                       alt="rightarrow"
                       src={rightarrow}
                     />
-                  </a>
+                  </div>
                 </button>
               </div>
             </div>
