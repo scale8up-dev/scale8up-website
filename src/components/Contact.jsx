@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import rightarrow from "../assets/arrow-right.png";
-
+import { useForm, ValidationError } from "@formspree/react";
 export default function Contact() {
+  const [state, handleSubmit] = useForm("xgvzljbp");
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  // When form submission succeeds
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowSuccess(true);
+
+      const timer = setTimeout(() => {
+        setShowSuccess(false);
+      }, 3000); 
+
+      return () => clearTimeout(timer); // Cleanup on unmount or rerun
+    }
+  }, [state.succeeded]);
+
   return (
     <section className="py-[50px] px-5 xl:p-[50px]" id="contact">
       <div className="w-full bg-white rounded-[20px] py-5 xl:py-[110px]">
@@ -20,27 +36,32 @@ export default function Contact() {
                 EMAIL US:
               </div>
               <div className="text-2xl font-bold">
-                <a href="mailto:info@businessevolutionai.com" className="hover:underline">info@businessevolutionai.com</a>
+                <a
+                  href="mailto:info@businessevolutionai.com"
+                  className="hover:underline"
+                >
+                  info@businessevolutionai.com
+                </a>
               </div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 CALL US:
               </div>
               <div className="text-2xl font-bold">
-                <a href="tel:5615420047" className="hover:underline">561-542-0047</a>
+                <a href="tel:5615420047" className="hover:underline">
+                  561-542-0047
+                </a>
               </div>
 
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 ADDRESS:
               </div>
               <div className="text-2xl font-bold">
-               30 N Gould Street
+                30 N Gould Street
                 <br />
-               Suite R
-
+                Suite R
                 <br />
-               Sheridan, WY 82801
-
+                Sheridan, WY 82801
               </div>
             </div>
 
@@ -53,31 +74,127 @@ export default function Contact() {
                 achieve your goals.
               </div>
 
-              <form>
+              {/* Show form only when not succeeded */}
+
+              <form onSubmit={handleSubmit}>
                 <div className="md:flex mt-[30px] gap-[15px]">
-                  <input type="text" placeholder="First Name *" className="border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full md:w-1/2"/>
-                   <input type="text" placeholder="Last Name *" className="border border-[#dcdcdc] rounded-[15px] py-[15px] mt-[15px] md:mt-0 pl-5 w-full md:w-1/2"/>
+                  <div className="w-full md:w-1/2">
+                    <input
+                      id="fname"
+                      type="text"
+                      name="fname"
+                      placeholder="First Name *"
+                      required
+                      className="border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full focus:border-[#49B0DC] focus:outline-none transition-colors"
+                    />
+                    <ValidationError
+                      prefix="First Name"
+                      field="fname"
+                      errors={state.errors}
+                      className="text-red-500 text-sm mt-1 block"
+                    />
+                  </div>
+
+                  <div className="w-full md:w-1/2 mt-[15px] md:mt-0">
+                    <input
+                      id="lname"
+                      name="lname"
+                      type="text"
+                      placeholder="Last Name *"
+                      required
+                      className="border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full focus:border-[#49B0DC] focus:outline-none transition-colors"
+                    />
+                    <ValidationError
+                      prefix="Last Name"
+                      field="lname"
+                      errors={state.errors}
+                      className="text-red-500 text-sm mt-1 block"
+                    />
+                  </div>
                 </div>
-                 <input type="email" placeholder="Email *" className="border border-[#dcdcdc] rounded-[15px] my-[15px] py-[15px] pl-5 w-full"/>
-                 <input type="text" placeholder="subject" className="border border-[#dcdcdc] rounded-[15px] my-[15px] py-[15px] pl-5 w-full"/>
-                 <textarea  placeholder="Message" className="min-h-[150px] mb-0 border border-[#dcdcdc] rounded-[15px] my-[15px] py-[15px] pl-5 w-full"/>
-                 <button onClick={''} className="cursor-pointer flex items-center gap-[10px] bg-[#423F67] rounded-[10px] py-[6px] mt-[30px] pl-5 pr-[6px]">
+
+                <div className="mt-[15px]">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email *"
+                    required
+                    className="border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full focus:border-[#49B0DC] focus:outline-none transition-colors"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1 block"
+                  />
+                </div>
+
+                <div className="mt-[15px]">
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject *"
+                    required
+                    className="border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full focus:border-[#49B0DC] focus:outline-none transition-colors"
+                  />
+                  <ValidationError
+                    prefix="Subject"
+                    field="subject"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1 block"
+                  />
+                </div>
+
+                <div className="mt-[15px]">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message *"
+                    required
+                    className="min-h-[150px] border border-[#dcdcdc] rounded-[15px] py-[15px] pl-5 w-full focus:border-[#49B0DC] focus:outline-none transition-colors resize-vertical"
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1 block"
+                  />
+                </div>
+
+                {/* Display general form errors */}
+                {state.errors && state.errors.length > 0 && (
+                  <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-[10px]">
+                    <p className="text-red-600 text-sm font-medium">
+                      Please fix the following errors:
+                    </p>
+                  </div>
+                )}
+                {showSuccess && (
+                  <div className="mt-[30px]">
+                    <div className="bg-[#49B0DC] text-white text-center py-4 px-6 rounded-[10px] font-medium text-lg transition-opacity duration-500">
+                      Your message has been sent. Thank you!
+                    </div>
+                  </div>
+                )}
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="cursor-pointer flex items-center gap-[10px] bg-[#423F67] rounded-[10px] py-[6px] mt-[30px] pl-5 pr-[6px] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#3a3658] transition-colors"
+                >
                   <span className="text-[17px] font-semibold leading-5 text-white">
-                   Send Message
+                    {state.submitting ? "Sending..." : "Send Message"}
                   </span>
-                  <a
-                    className="h-12 w-12 flex items-center justify-center rounded-[10px] bg-white"
-                    href=""
-                  >
+                  <span className="h-12 w-12 flex items-center justify-center rounded-[10px] bg-white">
                     <img
                       className="h-5 w-5 object-contain"
                       alt="rightarrow"
-                      src={rightarrow}  
+                      src={rightarrow}
                     />
-                  </a>
+                  </span>
                 </button>
               </form>
-              
             </div>
           </div>
         </div>
