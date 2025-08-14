@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import rightarrow from "../assets/arrow-right.png";
 import { useForm, ValidationError } from "@formspree/react";
+
 export default function Contact() {
+  
   const [state, handleSubmit] = useForm("xgvzljbp");
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // When form submission succeeds
   useEffect(() => {
     if (state.succeeded) {
       setShowSuccess(true);
 
       const timer = setTimeout(() => {
         setShowSuccess(false);
-      }, 3000); 
+      }, 3000);
 
       return () => clearTimeout(timer); // Cleanup on unmount or rerun
     }
@@ -20,7 +21,7 @@ export default function Contact() {
 
   return (
     <section className="py-[50px] px-5 xl:p-[50px]" id="contact">
-      <div className="w-full bg-white rounded-[20px] py-5 xl:py-[110px]">+9
+      <div className="w-full bg-white rounded-[20px] py-5 xl:py-[110px]">
         <div className="max-w-[1300px] mx-auto px-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="border border-[#dcdcdc] p-5 xl:p-10 rounded-[20px]">
@@ -73,8 +74,6 @@ export default function Contact() {
                 Have a project in mind? Let's discuss how we can help you
                 achieve your goals.
               </div>
-
-              {/* Show form only when not succeeded */}
 
               <form onSubmit={handleSubmit}>
                 <div className="md:flex mt-[30px] gap-[15px]">
