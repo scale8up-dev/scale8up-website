@@ -28,7 +28,6 @@ function TestimonialSwiper() {
       title: "Sarah Johnson",
       description:
       "The web development team at Business Evolution AI delivered beyond our expectations. Their attention to detail and commitment to quality is outstanding.",
-        // "Working with Business Evolution AI on our mobile app development was a game-changer. Their expertise in cross-platform development saved us time and resources.",
     },
      {
       id: 3,
@@ -117,7 +116,7 @@ function TestimonialSwiper() {
           marginTop: "40px",
         }}
       >
-        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-[#423F67] bg-transparent hover:bg-[#423F67] swiper-button-prev-custom-t rounded-[10px] px-2 py-1">
+        <a className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-[#423F67] bg-transparent hover:bg-[#423F67] swiper-button-prev-custom-t rounded-[10px] px-2 py-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"
@@ -142,9 +141,9 @@ function TestimonialSwiper() {
               strokeLinejoin="round"
             />
           </svg>
-        </button>
+        </a>
 
-        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-[#423F67] bg-transparent hover:bg-[#423F67] swiper-button-next-custom-t rounded-[10px] px-2 py-1">
+        <a className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-[#423F67] bg-transparent hover:bg-[#423F67] swiper-button-next-custom-t rounded-[10px] px-2 py-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"
@@ -169,7 +168,7 @@ function TestimonialSwiper() {
               stroke-linejoin="round"
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );

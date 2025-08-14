@@ -6,18 +6,18 @@ import linkedin from "../assets/linkedin.svg";
 export default function Footer({ activeSection }) {
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
-    
+
     if (targetId === "") {
       // Scroll to top for home
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
         const offsetTop = targetSection.offsetTop - 80; // Account for header height
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     }
-    
+
     // Prevent URL hash change
     if (window.history && window.history.replaceState) {
       window.history.replaceState(null, null, window.location.pathname);
@@ -28,13 +28,13 @@ export default function Footer({ activeSection }) {
     <div className="w-full bg-[#070C11] rounded-[10px] pt-[121px] pb-[50px]">
       <div className="max-w-[1300px] mx-auto px-5">
         <div className="flex items-center justify-between">
-          <div className="logoimg">
-            <img src={logo} alt="logo" />
+          <div className="logoimg cursor-pointer">
+            <img src={logo} alt="logo" onClick={(e) => handleNavClick(e, "")} />
           </div>
           <div className="flex items-center">
             <div className="flex items-center gap-[10px] pl-12 pr-[10px]">
               <a
-                className="h-15 w-15 flex items-center justify-center rounded-[10px] border border-[#49B0DC] hover:bg-[#49B0DC] transition-colors"
+                className="h-15 w-15 flex items-center justify-center rounded-[10px] border border-[#49B0DC]  transition-colors"
                 href="https://www.facebook.com/scale8upcommunity/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export default function Footer({ activeSection }) {
                 <img className="h-5 w-5 object-contain" src={fb} alt="fb" />
               </a>
               <a
-                className="h-15 w-15 flex items-center justify-center rounded-[10px] border border-[#49B0DC] hover:bg-[#49B0DC] transition-colors"
+                className="h-15 w-15 flex items-center justify-center rounded-[10px] border border-[#49B0DC] transition-colors"
                 href="https://www.linkedin.com/company/scale8up/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,6 +56,7 @@ export default function Footer({ activeSection }) {
             </div>
           </div>
         </div>
+
         <div className="my-[35px] w-full border-t border-[#fff] opacity-30"></div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-center gap-2 sm:gap-10 md:gap-18 lg:gap-20">

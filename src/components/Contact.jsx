@@ -20,7 +20,7 @@ export default function Contact() {
 
   return (
     <section className="py-[50px] px-5 xl:p-[50px]" id="contact">
-      <div className="w-full bg-white rounded-[20px] py-5 xl:py-[110px]">
+      <div className="w-full bg-white rounded-[20px] py-5 xl:py-[110px]">+9
         <div className="max-w-[1300px] mx-auto px-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="border border-[#dcdcdc] p-5 xl:p-10 rounded-[20px]">
@@ -35,7 +35,7 @@ export default function Contact() {
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 EMAIL US:
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-xl lg:text-2xl font-bold">
                 <a
                   href="mailto:info@businessevolutionai.com"
                   className="hover:underline"
@@ -47,7 +47,7 @@ export default function Contact() {
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 CALL US:
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-xl lg:text-2xl font-bold">
                 <a href="tel:5615420047" className="hover:underline">
                   561-542-0047
                 </a>
@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="text-[#49B0DC] font-semibold text-[18px] mt-10 mb-[15px]">
                 ADDRESS:
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-xl lg:text-2xl font-bold">
                 30 N Gould Street
                 <br />
                 Suite R

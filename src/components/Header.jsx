@@ -38,9 +38,8 @@ export default function Header({ activeSection }) {
     <div className="w-full bg-white sticky top-0 shadow-lg z-50">
       <div className="max-w-[1300px] mx-auto p-5 relative">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="logoimg max-w-[180px] xl:max-w-full">
-            <img src={logo} alt="logo" />
+          <div className="logoimg max-w-[180px] xl:max-w-full cursor-pointer ">
+            <img src={logo} alt="logo" onClick={(e) => handleNavClick(e, "")} />
           </div>
 
           {/* Desktop Navigation */}
@@ -297,25 +296,8 @@ export default function Header({ activeSection }) {
                 />
               </a>
             </div>
-
-            {/* Mobile Contact Button */}
-            {/* <button
-              onClick={(e) => handleNavClick(e, "contact")}
-              className="cursor-pointer flex items-center justify-center gap-[10px] bg-[#49B0DC] rounded-[10px] py-3 px-5 hover:bg-[#3A9BC1] transition-colors mx-4 mt-4"
-            >
-              <span className="text-[17px] font-semibold leading-5 text-white">
-                Contact Us
-              </span>
-              <div className="h-8 w-8 flex items-center justify-center rounded-[6px] bg-white">
-                <img
-                  className="h-4 w-4 object-contain"
-                  src={rightarrow}
-                  alt="rightarrow"
-                />
-              </div>
-            </button> */}
             <button
-             onClick={(e) => handleNavClick(e, "contact")}
+              onClick={(e) => handleNavClick(e, "contact")}
               className="cursor-pointer flex items-center justify-between gap-[10px] bg-[#49B0DC] rounded-[10px] py-[6px] pl-5 pr-[6px] hover:bg-[#1F2A3D] transition-colors mt-4"
             >
               <span className="text-[17px] font-semibold leading-5 text-white">

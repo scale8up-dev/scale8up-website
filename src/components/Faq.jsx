@@ -85,9 +85,6 @@ export default function Faq() {
                       alt="faq_arrow"
                       className={`${openIndex === index ? "rotate-180" : ""}`}
                     />
-                    {/* <span className="text-xl">
-                      {openIndex === index ? "−" : "+"}
-                    </span> */}
                   </button>
 
                   <div

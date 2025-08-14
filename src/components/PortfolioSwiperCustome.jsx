@@ -90,7 +90,7 @@ function PortfolioSwiperCustome() {
           padding: "8px",
         }}
       >
-        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-white bg-transparent hover:bg-white swiper-button-prev-custom rounded-[10px] px-2 py-1">
+        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-white bg-transparent hover:bg-white swiper-button-prev-customs rounded-[10px] px-2 py-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"
@@ -117,7 +117,7 @@ function PortfolioSwiperCustome() {
           </svg>
         </button>
 
-        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-white bg-transparent hover:bg-white swiper-button-next-custom rounded-[10px] px-2 py-1">
+        <button className="cursor-pointer group h-15 w-15 flex items-center justify-center border border-white bg-transparent hover:bg-white swiper-button-next-customs rounded-[10px] px-2 py-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"
@@ -148,8 +148,8 @@ function PortfolioSwiperCustome() {
       <Swiper
         modules={[Navigation]}
         navigation={{
-          nextEl: ".swiper-button-next-custom",
-          prevEl: ".swiper-button-prev-custom",
+          nextEl: ".swiper-button-next-customs",
+          prevEl: ".swiper-button-prev-customs",
         }}
         spaceBetween={20}
         slidesPerView={1.5}
