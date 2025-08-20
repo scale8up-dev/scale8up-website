@@ -16,7 +16,7 @@ function PortfolioSwiperCustome() {
       text: "Web Solutions",
       image: service1,
       url: "https://www.prepforindependence.ai/",
-      title: "PrepForIndependence.AI",
+      title: "PrepForIndependence AI",
       description:
         "Leverage the power of artificial intelligence with our cutting-edge solutions. From machine learning to natural language processing, we help you stay ahead in the AI revolution.",
     },
@@ -25,7 +25,7 @@ function PortfolioSwiperCustome() {
       text: "AI Projects",
       image: service2,
       url: "https://www.scale8upmethod.com/",
-      title: "Scale8Up AI",
+      title: "Scale8UP AI",
       description:
         "Custom web solutions that combine stunning design with powerful functionality. We create responsive, scalable, and secure web applications that drive your business forward.",
     },
@@ -33,7 +33,7 @@ function PortfolioSwiperCustome() {
       id: 3,
       text: "Mobile Apps",
       image: service3,
-      url: "http://stage.onyxflowai.com/",
+      url: "https://stage.onyxflowai.com/",
       title: "OnyxFlow",
       description:
         "Native and cross-platform mobile applications that deliver exceptional user experiences. We build apps that users love and businesses trust.",
@@ -42,8 +42,8 @@ function PortfolioSwiperCustome() {
       id: 4,
       text: "AI Projects",
       image: service4,
-      url: "http://foreclosurebidai.com/",
-      title: "foreclosurebid AI",
+      url: "https://foreclosurebidai.com/",
+      title: "Foreclosurebid AI",
       description:
         "User-centered design solutions that create engaging and intuitive interfaces. Our designs combine aesthetics with functionality to deliver memorable user experiences.",
     },
@@ -70,7 +70,7 @@ function PortfolioSwiperCustome() {
       url: "https://envisionhr360.com/",
       text: "Web Solutions",
       image: service4,
-      title: "Envision HR Platform",
+      title: "Envision HR 360",
       description:
         "Empower your SMB with self-service HR resources, AI-powered assistance, and on-demand access to human expertise—all through one intuitive platform.",
     },
