@@ -4,7 +4,7 @@ import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
 
 const stats = [
-  { number: 50, label: "Happy Clients" },
+  { number: 47, label: "Happy Clients" },
   { number: 50, label: "Projects Completed" },
   { number: 2500, label: "Hours Of Support" },
   { number: 25, label: "Team Members" },

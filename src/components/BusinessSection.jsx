@@ -30,7 +30,7 @@ export default function BusinessSection() {
           <div className="max-w-[1300px] px-5 mx-auto ">
             <div className="w-full max-w-[350px] lg:max-w-[450px] xl:max-w-[750px]">
               <h2 className="text-3xl lg:text-4xl xl:text-6xl xl:leading-[65px] font-semibold mb-[30px] text-white">
-                Ready to Transform Your Business?
+                Ready to Transform Your Business with AI ?
               </h2>
               <p className="text-[16px] leading-[26px] text-white mb-10">
                 Let's discuss how our innovative solutions can help you achieve

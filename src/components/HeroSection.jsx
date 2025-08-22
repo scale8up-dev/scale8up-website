@@ -79,7 +79,7 @@ export default function HeroSection() {
             Innovative Solutions for Your
             <span className="text-[#49B0DC] font-bold">
               {" "}
-              Digital <br /> Future!
+              AI Future!
             </span>
           </h1>
           <img src={playicon} alt="playicon" />
